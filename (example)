@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BaseDeployed {
+    address public owner;
+    uint256 public deployedAt;
+
+    constructor() {
+        owner = msg.sender;
+        deployedAt = block.timestamp;
+    }
+
+    function helloBase() external pure returns (string memory) {
+        return "Deployed on Base Network 🚀";
+    }
+}
